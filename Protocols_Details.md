@@ -1178,10 +1178,19 @@ CH1|CH2|CH3|CH4|CH5|CH6|CH7
 ---|---|---|---|---|---|---
 A|E|T_PITCH|R|T_HOLD|IDLE|MODE
 
-IDLE= 3 pos switch: -100% Normal, 0% Idle1, +100% Idle2
+**IDLE**  
+3 pos switch: -100% Normal, 0% Idle1, +100% Idle2  
+In Normal mode (-100%), negative pitch is limited and throttle is controlled by CH3 (T_PITCH)  
+From 0%->100% the govenor is active and controls the RPM as long as T_HOLD is not -100%  
 
-From the TX manual: MODE= 3 pos switch -100% Attitude, 0% Attitude(?), +100% 3D
-For M2: MODE= 3 pos switch -100% 6G, 0% 3D, +100% 3D
+**Mode**  
+From the TX manual:  
+3 pos switch -100% Attitude, 0% Attitude(?), +100% 3D  
+For M2: -100% 6G, 0% 3D, +100% 3D  
+
+**T_HOLD**  
+Simple Throttle Cut Switch  
+-100% Motor off  
 
 ## Q303 - *31*
 Autobind protocol
